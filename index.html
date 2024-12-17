@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Express AI</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+   
+</head>
+
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
+    <nav class="bg-slate-100 dark:bg-gray-800 p-3 shadow-md">
+        <div class="container mx-auto flex items-center justify-between">
+            <div class="text-white text-xl font-semibold">
+                <a href="#">Express AI</a>
+            </div>
+            <div class="flex space-x-4">
+                <button id="toggle-button"
+                    class="p-1 rounded-full bg-gray-800 text-white hover:bg-gray-700 focus:outline-none transition-all">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                        class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 3v2m0 12v2m9-9h-2M3 12H1m16.24-6.24a9 9 0 11-12.48 12.48A7 7 0 1012 3z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex justify-center items-center min-f-screen mt-5">
+        <div id="chat-container">
+            <div id="messages" class="text-gray-900">
+                <p class="leading-relaxed">
+                <div class="typewriter block font-bold text-gray-700 text-center" id="typewriter-head"></div>
+                <div class="typewriter" id="typewriter-text"></div>
+                </p>
+            </div>
+            <div id="input-container">
+                <input id="user-input" type="text" placeholder="Type your message .."
+                    class="outline-none text-gray-900">
+                <button id="send-btn">Send</button>
+                &nbsp;
+                <button id="record-btn" onclick="startRecording()">🎙️</button>
+                &nbsp;
+
+                <button id="play-pause-btn" onclick="togglePlayPause()"
+                    class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+                    🔊
+                </button>
+
+
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
